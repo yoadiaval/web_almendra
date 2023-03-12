@@ -1,0 +1,288 @@
+/****** TEXT SIZE ADJUST ******/
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+
+/****** BOX MODEL ******/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
+
+} 
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Playball&display=swap');
+
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Playball', cursive;
+
+*/
+
+@for $i from 1 through 12 {
+    $w: ($i/12)*100%;
+    .small-#{$i}{width:$w; float:left; }
+}
+
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/bg_body.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: scroll;
+    font-family:'Lato', sans-serif ;
+
+    h2{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: rgb(222, 217, 217);
+    }
+
+    p{
+        line-height: 150%;
+    }
+
+    .container{
+        clear: both;
+        width: 90vw;
+        height: max-content;
+        background-color: rgba(0, 0, 0, 0.6);
+        color:rgb(222, 217, 217);;
+        margin: 0 auto;
+    }
+
+    figure{
+        width: 100%;
+        img{width: 100%;}
+    }
+
+}
+
+header{
+    text-align: center;
+    height: 200px;
+    .group_name{
+        padding-top:50px ;
+        color:$primaryColor;
+        font-family:'Playball', cursive ;
+        font-size: 5rem;
+    }
+}
+
+nav{
+    
+    ul li{
+        float: left;
+        
+    }
+
+    ul li a {
+        display: block;
+        padding: 1rem 1rem;
+        text-decoration: none;
+        color:$primaryColor ;
+        font-weight: bolder;
+    }
+
+    ul li a:hover{
+        background-color: $btnColor;
+        color: $secondaryColor;
+    }
+}
+
+
+main{
+
+    padding: 20px $lateralSpace;
+    div{
+        margin: 20px $lateralSpace;
+    }
+    p{
+        margin: 20px 0;
+    }
+    
+
+    h2{
+        text-align: right;
+        margin-bottom: 1rem;
+        color: $primaryColor;
+
+    }
+
+    span{
+        font-weight: bold;
+    }
+    
+    .grupo{
+       margin: 60px 0;
+       clear: both;
+       div{
+        margin: 0;
+        text-align: center;
+       }
+       figure{
+        width: 100%;
+        padding: 20px;
+        img{
+            border-radius: 50%;
+        }
+       }
+       
+       
+        
+    }
+
+    hr{
+        border: 1px solid rgb(90, 89, 89);
+        clear: both;
+    }
+
+    .biografia{
+        margin-top: 60px;
+        clear: both;
+        text-align: center;
+    }
+    
+}
+
+aside{
+        padding-bottom: 30px;
+        .musicList{
+           .medium-8{
+            padding-left: 60px;
+           }
+            h2{margin-bottom: 30px;}
+            clear: both;
+            background-color: $btnColor;
+            margin: 0;
+            padding: 20px 15px;
+            h2{color: $primaryColor;
+            text-align: center;}
+        
+            .musicItem{
+                margin-bottom: 1rem;
+                clear: both;
+                div{
+                    float: left;
+                    margin: 0;
+                }
+                div:nth-child(1){width: min-content;  padding-right: 0.5rem; cursor: pointer;}
+                div:nth-child(2){width: 300px; margin: 0; justify-content: space-between ;
+                    p{width:250px;}             
+                    span{float: right}; }
+            }
+        }
+        
+        .nextPresentations{
+            margin-top: 60px;
+            padding-left: 20px;
+            h2{
+                margin-bottom: 30px;
+                padding-left: 20px;
+            }
+            .evento{
+                margin-bottom: 10px;
+                div{
+                    float: left;
+                    margin: 0 $lateralSpace;
+                }
+                .fecha{
+                    width: min-content;
+                    background-color: $btnColor;
+                    border-radius: 5px;
+                    text-align: center;
+                    font-weight: bolder;
+                    color: $secondaryColor;
+                    padding: 1rem;
+                    
+                    h3{
+                        margin-bottom: 0.5rem;
+                        font-size: 2rem;
+                    }
+                }
+                div:nth-child(2){
+                    width: max-content;
+                    color: rgb(222, 217, 217);
+                    font-weight: bolder;
+                    
+                }
+                }
+        }
+}
+
+footer{
+    clear:both;
+    margin-top: 60px;
+    ul li{
+        display: inline;
+        padding: 0.2rem;
+    }
+    color: white;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+
+
+.clearfix:after {
+    content:" "; 
+    display: table;
+    clear: both;
+}
+
+
+.h2contacto{
+    margin-top: 1rem;
+}
+.contacto{
+
+    p:nth-child(1){
+        font-size: 2rem;
+    }
+    p:nth-child(2){
+        font-size: 1.5rem;
+    }
+    
+    background-color: #fff;
+    div{
+       text-align: center;
+        color: black;
+        margin: 0;
+        
+    }
+    form{
+        background-color: rgb(214, 214, 214);
+        text-align: center;
+        padding-top: 20px;
+        input,textarea,select, button{
+            width: 80%;
+            margin-bottom: 1rem; 
+            border-radius: 5px;
+            border: none;}
+        input,select,button{
+            height: 2rem;
+        }
+        button{
+            color: white;
+            background-color: rgb(31, 52, 79);
+
+        }
+        button:hover{
+            background-color: $btnColor;
+            scale: 1.05;
+        }
+    }
+
+
+}
+
+.location{text-align: center;
+margin-top: 60px;}
+
+.album{
+    margin: 0;
+    padding: 1rem;
+    figcaption{font-size: 2rem; position: relative; bottom: 2rem; background-color: rgba(0, 0, 0, 0.6); cursor: pointer;}
+}
+.album:hover{
+    figcaption{
+        color: $primaryColor;
+        font-weight: bold;
+    
+    }
+}
